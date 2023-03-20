@@ -1,0 +1,67 @@
+
+<app-officer-layout></app-officer-layout>
+
+
+<div style="padding-top:35px;padding-left:20px;padding-right:20px">
+  <table align="center" class="table" style="border:2px solid rgba(220,230,242,1);">
+    <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+      <th>Transaction No</th>
+      <th>AWB No</th>
+      <th>Sender Address</th>
+      <th>Receiver Address</th>
+      <th>Insured</th>
+      <th>DeliveryMode</th>
+      <th>DeliveryStatus</th>
+      <th>ScheduledDate</th>
+      <th>DeliveredDate</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of packageList" style="background-color:white">
+      <!--Add your logic here-->
+
+      <td style="font-size:14px;"> {{item.transactionId }} </td>
+      <td style="font-size:14px;"> {{item.awbnumber }} </td>
+      <td style="font-size:14px"> {{item.senderAddr}} </td>
+      <td style="font-size:14px"> {{item.receiverAddr}} </td>
+      <td style="font-size:14px">
+        <span [hidden]="!item.insurance">Yes</span>
+        <span [hidden]="item.insurance">No</span>
+      </td>
+      <td style="font-size:14px"> {{item.deliveryMode}} </td>
+      <td style="font-size:14px"> {{item.deliveryStatus}} </td>
+      <td style="font-size:14px"> {{item.scheduledDate}} </td>
+      <td style="font-size:14px"> {{item.deliveredDate}} </td>
+      <td style="font-size:14px">
+
+        <!--<div class="dropdown login100-form-btn">
+    <button class="dropbtn">Action</button>
+    <div class="dropdown-content">
+      <a >PickedUp</a>
+      <a >Deliered</a>
+      <a >Not Deliered</a>
+    </div>
+  </div>-->
+
+
+
+        <button class="login100-form-btn" *ngIf="item.deliveryStatus=='SCHEDULED'" (click)="sPickUp(item)" type="submit">
+          Picked- Up
+        </button>
+        <br>
+        <button class="login100-form-btn" *ngIf="item.deliveryStatus=='IN-TRANSIT'" (click)="sDeliver(item)" type="submit" style="padding: 5px;">
+          Delivered
+        </button>
+        <br>
+        <button class="login100-form-btn" *ngIf="item.deliveryStatus=='IN-TRANSIT'" (click)="sFailed(item)" type="submit">
+          FAILED
+        </button>
+      </td>
+
+    </tr>
+  </table>
+</div>
+
+<div *ngIf="showMsgDiv">
+  <h4 class="jumbotron" style="text-align:center;">No Packages available</h4>
+</div>
+

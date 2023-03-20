@@ -1,0 +1,19 @@
+<div class="col-12">
+  <span class="mx-md-2 d-inline-block" ></span>
+  <!--  <div class="w3-bar w3-black"> -->
+  <div class="topnav ">
+    <a class="active" routerLink="" >Home</a>
+    <a routerLink="/checkservice" [hidden]="vSchedulePackage">Schedule Package</a>
+    <a href="/home#contact-section">Contact</a>
+    <div class="topnav-right">
+      <a routerLink="/viewaddress" [hidden]="vAddAddress">Address</a>
+      <a routerLink="/editprofile" [hidden]="vEditProfile">Edit Profile</a>
+      <a routerLink="/changepassword" [hidden]="vChangeCredentials">Edit Credentials</a>
+      <a href="" (click)="logOut()">LogOut</a>
+      <!-- <div class="dropdown">
+      <button class="dropbtn">Edit</button>
+      </div> -->
+    </div>
+
+  </div>
+  </div>

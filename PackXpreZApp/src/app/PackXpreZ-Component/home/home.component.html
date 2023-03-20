@@ -1,0 +1,506 @@
+
+<div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <span class="mx-md-2 d-inline-block"></span>
+
+      </div>
+    </div>
+  </div>
+</div>
+<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+  <div class="container">
+    <div class="row align-items-center position-relative">
+
+      <div class="site-logo">
+        <a routerLink="/home" class="text-black"><span class="text-primary">PackXprez</span></a>
+      </div>
+      <div class="col-12">
+        <nav class="site-navigation text-right ml-auto " role="navigation">
+          <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+            <li><a href="#home-section" class="nav-link">Home</a></li>
+            <li><a href="#services-section" class="nav-link">Services</a></li>
+
+            <li>
+              <a href="#about-section" class="nav-link">About Us</a>
+
+            </li>
+            <li><a href="#why-us-section" class="nav-link">Why Us</a></li>
+            <li><a href="#testimonials-section" class="nav-link">Happy Clients</a></li>
+            <li><a href="#contact-section" class="nav-link" [hidden]="hideFeedback">Contact Us</a></li>
+            <li><a routerLink="/register" [hidden]="hideLogin" class="nav-link">SignUp</a></li>
+            <!-- <li><a href="Login.html" class="dropdown">Login</a></li> -->
+            <li class="dropdown">
+              <button [hidden]="hideLogin" class="dropbtn">Login</button>
+              <div class="dropdown-content">
+                <a routerLink="/customerlogin" class="loginref">Customer</a>
+                <a routerLink="/officerlogin" class="loginref">Admin</a>
+              </div>
+            </li>
+            <!--<li><a href="" [hidden]="!hideLogin" class="nav-link" (click)="logOut()">LogOut</a></li>-->
+
+
+            <li class="dropdown">
+              <button [hidden]="!hideLogin" class="dropbtn">Profile</button>
+              <div class="dropdown-content">
+                <a class="nav-link btn" (click)="goToDashBoard()">DashBoard</a>
+                <a class="nav-link btn" (click)="logOut()">LogOut</a>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+    </div>
+  </div>
+</header>
+
+
+<!-- --------------------------------------------------------------------------------- -->
+
+<div class="site-wrap" id="home-section">
+
+
+  <div class="ftco-blocks-cover-1">
+    <div class="ftco-cover-1 overlay" style="background-image: url('src/app/images/depot_hero_1.jpg')">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-lg-6">
+            <h1>Transportations &amp; Logistics</h1>
+            <p class="mb-5">Adding Speed to your Deliveries</p>
+            <form #TrackPackage="ngForm" (ngSubmit)="trackPackage(TrackPackage)">
+              <div class="form-group d-flex">
+                <input type="text" class="form-control" #awbnumer="ngModel" name="awbnumber" placeholder="Your tracking number" ngModel>
+                <input type="submit" class="btn btn-primary text-white px-4" value="Track Now">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END .ftco-cover-1 -->
+    <div class="site-section ftco-service-image-1 pb-5">
+      <div class="container">
+        <div class="owl-carousel owl-all">
+          <div class="service text-center">
+            <a href="#"><img src="src/app/images/depot_img_1.jpg" alt="Image" class="img-fluid"></a>
+            <div class="px-md-3">
+              <h3><a href="#">Truck Insurance</a></h3>
+              <p>Our Trucks are Insured,to provide financial protection against physical damage or bodily injury resulting from traffic collisions and against liability that could also arise from incidents in a vehicle</p>
+            </div>
+          </div>
+          <div class="service text-center">
+            <a href="#"><img src="src/app/images/depot_img_2.jpg" alt="Image" class="img-fluid"></a>
+            <div class="px-md-3">
+              <h3><a href="#">Air Cargo</a></h3>
+              <p>Transportation of cargo by a courier on a plane is very fast and guarantees the safety of cargo.This quick service has always proven useful for companies of various scale – from individual traders to mass producers and importers</p>
+            </div>
+          </div>
+          <div class="service text-center">
+            <a href="#"><img src="src/app/images/depot_img_3.jpg" alt="Image" class="img-fluid"></a>
+            <div class="px-md-3">
+              <h3><a href="#">Sea Freight</a></h3>
+              <p>One of the safest and popular means of transportation. Currently it comprises about 80% of international trade.Cargo transportation by sea has advantages of very heavy and large size cargoes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-section bg-light" id="services-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-7 text-center">
+          <div class="block-heading-1">
+            <h2>Services</h2>
+            <p>We Cover almost all areas of courier transportations,to provide our Customers with hassle-free,safe and reliable Service.</p>
+          </div>
+        </div>
+      </div>
+      <div class="owl-carousel owl-all">
+        <div class="block__35630 text-center">
+          <div class="icon mb-0">
+            <span class="flaticon-ferry"></span>
+          </div>
+          <h3 class="mb-3">Sea Freight</h3>
+          <p>Have your goods or cargo sent by sea,if you they are very bulky and need cheap way of transport.</p>
+        </div>
+        <div class="block__35630 text-center">
+          <div class="icon mb-0">
+            <span class="flaticon-airplane"></span>
+          </div>
+          <h3 class="mb-3">Air Freight</h3>
+          <p>Have your goods or cargo sent by air,if they require to reach urgently as time is money.</p>
+        </div>
+        <div class="block__35630 text-center">
+          <div class="icon mb-0">
+            <span class="flaticon-box"></span>
+          </div>
+          <h3 class="mb-3">Package Forwarding</h3>
+          <p>On time package forwarding is done at our warehouses to avoid any delay to the package.</p>
+        </div>
+        <div class="block__35630 text-center">
+          <div class="icon mb-0">
+            <span class="flaticon-lorry"></span>
+          </div>
+          <h3 class="mb-3">Trucking</h3>
+          <p>Couriers that require less distance to travel are borne by our Trucks.Ooohh they are fassst...</p>
+        </div>
+        <div class="block__35630 text-center">
+          <div class="icon mb-0">
+            <span class="flaticon-warehouse"></span>
+          </div>
+          <h3 class="mb-3">Warehouse</h3>
+          <p>A big,fully automated warehouse to cater to our needs,that provides safety to packages.</p>
+        </div>
+        <div class="block__35630 text-center">
+          <div class="icon mb-0">
+            <span class="flaticon-add"></span>
+          </div>
+          <h3 class="mb-3">Delivery</h3>
+          <p>We believe in On-Time safe delivery of the courier packages.That's how we build customer trust!..</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="site-section" id="about-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-7 text-center">
+          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
+            <h2>About Us</h2>
+            <!--<h5>
+              International Delivery Experience
+            </h5>-->
+            <p>More than 14 years of International courier delivery experience.Call us with questions about international courier delivery.</p>
+            <!--<h5>
+              Customer Satisfaction
+            </h5>-->
+            <p>We have a track record of thousands of satisfied customers over the last decade.Families trust us to deliver their gifts safely on time!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-section bg-light" id="about-section">
+    <div class="container">
+      <div class="row justify-content-center mb-4 block-img-video-1-wrap">
+        <div class="col-md-12 mb-5">
+          <figure class="block-img-video-1" data-aos="fade">
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="">
+              <div class="block-counter-1">
+                <span class="number"><span data-number="19">0</span>+</span>
+                <span class="caption">Years in Service</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="block-counter-1">
+                <span class="number"><span data-number="2332">0</span>+</span>
+                <span class="caption">Employees</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="block-counter-1">
+                <span class="number"><span data-number="100">0</span>+</span>
+                <span class="caption">Covered Countries</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="block-counter-1">
+                <span class="number"><span data-number="827">0</span>+</span>
+                <span class="caption">Couriers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-section" id="team-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-7 text-center">
+          <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
+            <h2>Our Staff</h2>
+            <p>Meet Our Staff,exceptionally talented and young minds,that work behind the scenes to fullfill all that is required for safe delivery of your packages.</p>
+          </div>
+        </div>
+      </div>
+      <div class="owl-carousel owl-all mb-5">
+        <div class="block-team-member-1 text-center rounded h-100">
+          <figure>
+            <img src="src/app/images/person_1.jpg" alt="Image" class="img-fluid rounded-circle">
+          </figure>
+          <h3 class="font-size-20 text-black">Sohail Shaikh</h3>
+          <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+          <p class="mb-4">“Make no little plans. They have no magic to stir men's blood and probably themselves will not be realized. Make big plans; aim high in hope and work, remembering that a noble, logical diagram once recorded will never die.”.</p>
+          <div class="block-social-1">
+            <!-- <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
+            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>
+            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a> -->
+          </div>
+        </div>
+        <div class="block-team-member-1 text-center rounded h-100">
+          <figure>
+            <img src="src/app/images/person_2.jpg" alt="Image" class="img-fluid rounded-circle">
+          </figure>
+          <h3 class="font-size-20 text-black">Rigved Patil</h3>
+          <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+          <p class="mb-4">Never doubt that a small group of thoughtful, committed citizens can change the world..</p>
+          <div class="block-social-1">
+            <!-- <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
+             <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>
+             <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>
+            -->
+          </div>
+        </div>
+        <div class="block-team-member-1 text-center rounded h-100">
+          <figure>
+            <img src="src/app/images/person_3.jpg" alt="Image" class="img-fluid rounded-circle">
+          </figure>
+          <h3 class="font-size-20 text-black">Akash Telote</h3>
+          <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+          <p class="mb-4">Change will not come if we wait for some other person or if we wait for some other time. We are the change that we seek."</p>
+          <div class="block-social-1">
+            <!-- <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
+            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>
+            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a> -->
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light" id="pricing-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-md-7">
+            <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
+              <h2>Pricing</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="">
+            <div class="pricing">
+              <h3 class="text-center text-black">OverNight</h3>
+              <div class="price text-center mb-4 ">
+                <span><span>500</span>/Package</span>
+              </div>
+              <ul class="list-unstyled ul-check success mb-5">
+                <li>Package Delivered in a Day</li>
+                <li>Higgest Priority is given for this kind of shipment </li>
+                <li class="remove">For Large Distance Air Cargo is preferred</li>
+                <li class="remove">Fastest Service mode of all</li>
+                <!--<li class="remove">Dolorum esse odio quas architecto sint</li>-->
+              </ul>
+              <p class="text-center">
+                <!--                   <a href="#" class="btn btn-secondary btn-md">Buy Now</a> -->
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing">
+              <h3 class="text-center text-black">Express</h3>
+              <div class="price text-center mb-4 ">
+                <span><span>100</span> / Package</span>
+              </div>
+              <ul class="list-unstyled ul-check success mb-5">
+                <li>Package Delivered in 2/3 days</li>
+                <li>Most Used Service of all time</li>
+                <li>Package send using railway & truck</li>
+                <li>No. 1 service mode in India</li>
+                <!--<li class="remove">Dolorum esse odio quas architecto sint</li>-->
+              </ul>
+              <p class="text-center">
+                <!--                   <a href="#" class="btn btn-primary btn-md text-white">Buy Now</a> -->
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing">
+              <h3 class="text-center text-black">Standard</h3>
+              <div class="price text-center mb-4 ">
+                <span><span>50</span>/Package</span>
+              </div>
+              <ul class="list-unstyled ul-check success mb-5">
+                <li>Package Delivered Within a Week</li>
+                <!--<li></li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipisicing elit</li>-->
+                <!--<li>Dolorum esse odio quas architecto sint</li>-->
+              </ul>
+              <p class="text-center">
+                <!--                   <a href="#" class="btn btn-secondary btn-md">Buy Now</a> -->
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="block__73694 site-section border-top" id="why-us-section">
+      <div class="container">
+        <div class="row d-flex no-gutters align-items-stretch">
+          <div class="col-12 col-lg-6 block__73422 order-lg-2" style="background-image: url('src/app/images/depot_delivery_1.jpg');" data-aos="fade-left" data-aos-delay="">
+          </div>
+
+          <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
+            <h2 class="mb-4 text-black">Why PackXpreZ</h2>
+            <!--<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam error aliquid, dolores animi obcaecati quisquam accusamus soluta?</p>-->
+            <ul class="ul-check primary list-unstyled mt-5">
+              <li>Cargo express</li>
+              <li>Secure Services</li>
+              <li>Secure Warehouseing</li>
+              <li>Cost savings</li>
+              <li>Proven by great companies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-light block-13" id="testimonials-section" data-aos="fade">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="block-heading-1">
+            <h2>Happy Clients</h2>
+          </div>
+        </div>
+        <div class="owl-carousel nonloop-block-13">
+          <div>
+            <div class="block-testimony-1 text-center">
+              <blockquote class="mb-4">
+                <p>
+                  &ldquo;I have been using PackXpreZ quite frequently and have been very satisfied with the service provided. Last week, however, there was an unfortunate glitch which was immediately attended to and sorted out by them.
+                  Here, I have to make a special mention of Mr Sameer Pathan who was so polite, courteous and obliging and promptly sorted out the issue.&rdquo;
+                </p>
+              </blockquote>
+              <figure>
+                <img src="src/app/images/person_1.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
+              </figure>
+              <h3 class="font-size-20 text-black">Ricky Fisher</h3>
+            </div>
+          </div>
+          <div>
+            <div class="block-testimony-1 text-center">
+              <blockquote class="mb-4">
+                <p>&ldquo;Great service as always. I have been relying on Courier Force for all my Courier needs for over a decade and they never let me down. Very Prompt and efficient. The prices are reasonable and moreover no tension delivery.&rdquo;</p>
+              </blockquote>
+              <figure>
+                <img src="src/app/images/person_2.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
+              </figure>
+              <h3 class="font-size-20 mb-4 text-black">Ken Davis</h3>
+            </div>
+          </div>
+          <div>
+            <div class="block-testimony-1 text-center">
+
+              <blockquote class="mb-4">
+                <p>
+                  &ldquo;Packxprez India is the most popular courier service of south asia. It provides service to more than 200 countries. Blue dart is very fast in terms of delivery time. Most of the time they deliver the package within 24 hours in India. Few months back I sent a package from Bangalore to Kolkata via blue dart. It was very urgent and Packxprez delievered the package within 24 hours.
+
+                  It was a great experience with Packxprez. I always prefer Packxprez courier for sending any document or non document package. You can  track your package also through PackXpreZ website. They have good customer care service also. Their customer care executives reply instantly on your queries. Over all it is very good courier service. So if you are planning to use any courier service in future then prefer PackXpreZ..&rdquo;
+                </p>
+              </blockquote>
+              <figure>
+                <img src="src/app/images/person_1.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
+              </figure>
+              <h3 class="font-size-20 text-black">Mellisa Griffin</h3>
+
+            </div>
+          </div>
+          <div>
+            <div class="block-testimony-1 text-center">
+              <blockquote class="mb-4">
+                <p>&ldquo;The service is prompt and reliable, I would only want a pickup service available, other than that, the folks at PackXpreZ are courteous and professional.&rdquo;</p>
+              </blockquote>
+              <figure>
+                <img src="src/app/images/person_3.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
+              </figure>
+              <h3 class="font-size-20 mb-4 text-black">Robert Steward</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div  [hidden]="hideFeedback" id="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="">
+          <div class="block-heading-1">
+            <h2>Contact Us</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 mb-5" data-aos="fade-up" data-aos-delay="100">
+          <form #feedback="ngForm" (ngSubmit)="Postfeedback(feedback)" method="post">
+            <!--<div class="form-group row">
+              <div class="col-md-6 mb-4 mb-lg-0">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>-->
+            <div class="form-group row">
+              <div class="col-md-12">
+                <input type="text" name="emailId" #emailId="ngModel" class="form-control" placeholder="EmailId" ngModel required>
+              </div>
+            </div>
+            <div>
+              <label>Feedback Type: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <select name="feedbackType" #feedbackType="ngModel" ngModel>
+              <option value="Appreciation" selected>Appreciation</option>
+              <option value="Complaint">Complaint</option>
+            </select>
+
+            </div>
+
+            <div class="form-group row">
+              <div class="col-md-12">
+                <textarea class="form-control" name="feedbacktext" #feedbacktext="ngModel" placeholder="Write your message." cols="30" rows="10" ngModel></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6 mr-auto">
+                <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

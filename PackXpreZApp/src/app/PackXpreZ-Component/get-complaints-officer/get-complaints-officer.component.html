@@ -1,0 +1,22 @@
+<app-officer-layout></app-officer-layout>
+
+<div style="padding-top:35px;padding-left:20px;padding-right:20px">
+  <table align="center" class="table" style="border:2px solid rgba(220,230,242,1);">
+    <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+      <th>Feedback Id</th>
+      <th>Email Id</th>
+      <th>Feedback</th>
+      <th>Action Status</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of complaints" style="background-color:white">
+      <!--Add your logic here-->
+
+      <td style="font-size:12px"> {{item.feedbackId }} </td>
+      <td style="font-size:12px"> {{item.emailId }} </td>
+      <td style="font-size:12px"> {{item.feedBackText}} </td>
+      <td style="font-size:12px"> {{item.actionTaken}} </td>
+      <td style="font-size:12px"> <button *ngIf="item.actionTaken=='Action Pending'" class="login100-form-btn" (click)="changeComplaintStatus(item.feedbackId)">Action</button> </td>
+    </tr>
+  </table>
+</div>

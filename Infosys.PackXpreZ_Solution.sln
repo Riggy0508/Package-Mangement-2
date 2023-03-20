@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infosys.PackXpreZ.DataAccessLayer", "PackXpreZ_DAL\Infosys.PackXpreZ.DataAccessLayer.csproj", "{1A2AF3CA-C057-4173-B73B-EE8D66B222A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infosys.PackXpreZ.WebServices", "Infosys.PackXpreZ.WebServices\Infosys.PackXpreZ.WebServices.csproj", "{08CA3349-4CA5-4FDA-A71A-39FC3733A59B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infosys.PackXpreZ.Test", "Infosys.PackXpreZ.Test\Infosys.PackXpreZ.Test.csproj", "{863482E2-66EC-49A0-A752-A44EA0C9AF58}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PackXpreZApp", "PackXpreZApp", "{8710467A-B207-44A2-9572-D2071E2991B0}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52691"
+		Debug.AspNetCompiler.PhysicalPath = "PackXpreZApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52691\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52691"
+		Release.AspNetCompiler.PhysicalPath = "PackXpreZApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52691\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52691"
+		SlnRelativePath = "PackXpreZApp\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A2AF3CA-C057-4173-B73B-EE8D66B222A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2AF3CA-C057-4173-B73B-EE8D66B222A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2AF3CA-C057-4173-B73B-EE8D66B222A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2AF3CA-C057-4173-B73B-EE8D66B222A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08CA3349-4CA5-4FDA-A71A-39FC3733A59B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08CA3349-4CA5-4FDA-A71A-39FC3733A59B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08CA3349-4CA5-4FDA-A71A-39FC3733A59B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08CA3349-4CA5-4FDA-A71A-39FC3733A59B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{863482E2-66EC-49A0-A752-A44EA0C9AF58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{863482E2-66EC-49A0-A752-A44EA0C9AF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{863482E2-66EC-49A0-A752-A44EA0C9AF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{863482E2-66EC-49A0-A752-A44EA0C9AF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8710467A-B207-44A2-9572-D2071E2991B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8710467A-B207-44A2-9572-D2071E2991B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8710467A-B207-44A2-9572-D2071E2991B0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8710467A-B207-44A2-9572-D2071E2991B0}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D67B8455-128F-4B9C-B724-3FF3002B7488}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://myshcietatfs:8080/tfs/mstrack_training
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PackXpreZ_DAL\\Infosys.PackXpreZ.DataAccessLayer.csproj
+		SccProjectName1 = PackXpreZ_DAL
+		SccLocalPath1 = PackXpreZ_DAL
+		SccProjectUniqueName2 = Infosys.PackXpreZ.WebServices\\Infosys.PackXpreZ.WebServices.csproj
+		SccProjectName2 = Infosys.PackXpreZ.WebServices
+		SccLocalPath2 = Infosys.PackXpreZ.WebServices
+		SccProjectUniqueName3 = Infosys.PackXpreZ.Test\\Infosys.PackXpreZ.Test.csproj
+		SccProjectName3 = Infosys.PackXpreZ.Test
+		SccLocalPath3 = Infosys.PackXpreZ.Test
+		SccWebProject4 = true
+		SccProjectUniqueName4 = PackXpreZApp
+		SccProjectName4 = PackXpreZApp
+		SccLocalPath4 = PackXpreZApp
+		SccProjectEnlistmentChoice4 = 2
+	EndGlobalSection
+EndGlobal

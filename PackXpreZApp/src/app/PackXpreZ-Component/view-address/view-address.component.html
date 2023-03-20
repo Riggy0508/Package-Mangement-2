@@ -1,0 +1,46 @@
+
+
+<app-customer-layout></app-customer-layout>
+
+<div *ngIf="(addressList?.length > 0)">
+  <div style ="padding-top:35px;padding-left:20px;padding-right:20px">
+    <table align="center" class="table" style="border:2px solid rgba(220,230,242,1);">
+      <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+        <th>AddressId.</th>
+        <th>BuildingNo</th>
+        <th>StreetName</th>
+        <th>Locality</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Pincode</th>
+        <th>Action</th>
+      </tr>
+
+      <tr *ngFor="let item of addressList" style="background-color:white">
+        <!--Add your logic here-->
+        <td style="font-size:12px"> {{item.addressId }} </td>
+        <td style="font-size:12px"> {{item.buildingNo }} </td>
+        <td style="font-size:12px"> {{item.streetName}} </td>
+        <td style="font-size:12px"> {{item.locality}} </td>
+        <td style="font-size:12px"> {{item.city}} </td>
+        <td style="font-size:12px"> {{item.state}} </td>
+        <td style="font-size:12px"> {{item.pincode}} </td>
+        <td style="font-size:12px">
+          <button class="login100-form-btn" type="submit" (click)="editAddress(item.addressId)">Edit</button>
+          <button class="login100-form-btn" type="submit" (click)="RemoveAddress(item.addressId)">Remove</button>
+        </td>
+      </tr>
+    </table>
+</div>
+  </div>
+<div *ngIf="!(addressList?.length > 0)">
+  <br />
+  <br />
+  <!--<h3 style="align-content:center">--> <p style="text-align:center;font-size:30px;">No Address Available</p>
+</div>
+
+<p style="text-align:center;font-size:30px;"><button routerLink="/addaddress" class="dropbtn">Add Address</button></p>
+
+
+<!--<button type="submit">Add Address</button>-->
+

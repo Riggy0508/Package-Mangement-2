@@ -1,0 +1,44 @@
+
+
+<app-customer-layout></app-customer-layout>
+
+<div style="padding-top:35px;padding-left:20px;padding-right:20px">
+  <table align="center" class="table" style="border:2px solid rgba(220,230,242,1);">
+    <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+      <th>Transaction No.</th>
+      <th>AWB Number</th>
+      <th>Sender Address</th>
+      <th>Receiver Address</th>
+      <th>Insurance</th>
+      <th>DeliveryMode</th>
+      <th>DeliveryStatus</th>
+      <th>ScheduledDate</th>
+      <th>DeliveredDate</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of packages" style="background-color:white">
+      <!--Add your logic here-->
+
+      <td style="font-size:12px"> {{item.transactionId }} </td>
+      <td style="font-size:12px"> {{item.awbnumber }} </td>
+      <td style="font-size:12px"> {{item.senderAddr}} </td>
+      <td style="font-size:12px"> {{item.receiverAddr}} </td>
+      <td style="font-size:12px"> {{item.insurance}} </td>
+      <td style="font-size:12px"> {{item.deliveryMode}} </td>
+      <td style="font-size:12px"> {{item.deliveryStatus}} </td>
+      <td style="font-size:12px"> {{item.scheduledDate}} </td>
+      <td style="font-size:12px"> {{item.deliveredDate}} </td>
+      <td style="font-size:12px">
+        <button *ngIf="(item.deliveryStatus=='IN-TRANSIT')" [disabled]="showBtnDiv" class="login100-form-btn" (click)="RecallPackage(item.awbnumber)" type="submit">
+          Recall
+        </button>
+      </td>
+
+    </tr>
+  </table>
+  <div *ngIf="!(packages?.length > 0)">
+    <br />
+    <br />
+    <p style="text-align:center;font-size:30px;">No Packages Scheduled</p>
+  </div>
+</div>

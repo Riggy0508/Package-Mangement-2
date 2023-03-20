@@ -1,0 +1,12 @@
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\bin\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.deps.json
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\bin\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.runtimeconfig.json
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\bin\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.runtimeconfig.dev.json
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\bin\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.dll
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\bin\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.pdb
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\obj\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\obj\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\obj\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\obj\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.AssemblyInfo.cs
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\obj\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.dll
+C:\Users\shubham.khaire\source\Workspaces\OCT19LC2MSRT1BGROUP15\PackXpreZ\PackXpreZ_DAL\obj\Debug\netcoreapp2.1\Infosys.PackXpreZ.DataAccessLayer.pdb

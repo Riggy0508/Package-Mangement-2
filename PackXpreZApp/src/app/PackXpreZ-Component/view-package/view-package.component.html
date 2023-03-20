@@ -1,0 +1,35 @@
+<app-common-layout></app-common-layout>
+
+
+<div style="padding-top:35px;padding-left:20px;padding-right:20px" *ngIf="package">
+  <table align="center" class="table" style="border:2px solid rgba(220,230,242,1);">
+    <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+      <th>AWBNumber</th>
+      <th>Sender Address</th>
+      <th>Receiver Address</th>
+      <th>Insurance</th>
+      <th>DeliveryMode</th>
+      <th>DeliveryStatus</th>
+      <th>ScheduledDate</th>
+      <th>DeliveredDate</th>
+    </tr>
+    <tr style="background-color:white">
+      <!--Add your logic here-->
+
+      <td style="font-size:12px"> {{package.awbnumber }} </td>
+      <td style="font-size:12px"> {{package.senderAddr}} </td>
+      <td style="font-size:12px"> {{package.receiverAddr}} </td>
+      <td style="font-size:12px"> {{package.insurance}} </td>
+      <td style="font-size:12px"> {{package.deliveryMode}} </td>
+      <td style="font-size:12px"> {{package.deliveryStatus}} </td>
+      <td style="font-size:12px"> {{package.scheduledDate}} </td>
+      <td style="font-size:12px"> {{package.deliveredDate}} </td>
+
+    </tr>
+  </table>
+</div>
+
+<div *ngIf="showMsgDiv">
+  <h4 class="jumbotron" style="text-align:center;">Invalid AWB Number</h4>
+</div>
+

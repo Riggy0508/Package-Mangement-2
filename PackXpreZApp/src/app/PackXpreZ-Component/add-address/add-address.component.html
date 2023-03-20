@@ -1,0 +1,150 @@
+<app-customer-layout></app-customer-layout>
+
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
+      <form class="login100-form validate-form flex-sb flex-w" #addressForm="ngForm" (ngSubmit)="custAddAddress(addressForm)">
+        <span class="login100-form-title p-b-32">
+          Add Address
+        </span>
+        <div>
+          <span class="txt1 p-b-11">
+            Email ID
+          </span>
+          <div class="wrap-input100 validate-input m-b-36">
+            <input class="input100" type="text" size="25" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="40" name="mail" #mail1="ngModel" [ngModel]="emailID" ngModel required>
+            <span class="focus-input100"></span>
+          </div>
+          <div *ngIf="mail1.errors && (mail1.dirty || mail1.touched)">
+            <div [hidden]="!mail1.errors.required" style="color:red;">
+              EmailId is Mandatory
+            </div>
+            <div [hidden]="!mail1.errors.pattern" style="color:red;">
+              Invalid Pattern
+            </div>
+          </div>
+        </div>
+
+        <span class="txt1 p-b-11">
+          Building Number
+        </span>
+        <div class="wrap-input100 validate-input m-b-36">
+          <input class="input100" type="text" name="building" maxlength="20" pattern="^[A-Za-z0-9]+$" #building="ngModel" ngModel required>
+          <span class="focus-input100"></span>
+        </div>
+        <div *ngIf="building.errors && (building.dirty || building.touched)">
+          <div [hidden]="!building.errors.required" style="color:red;">
+            Building Number is Mandatory
+          </div>
+          <div [hidden]="!building.errors.pattern" style="color:red;">
+            Building Must contain Alphabets and number
+          </div>
+        </div>
+
+        <div>
+          <span class="txt1 p-b-11">
+            Street Name
+          </span>
+          <div class="wrap-input100 validate-input m-b-36">
+            <input class="input100" type="text" name="street" maxlength="20" pattern="^[A-Za-z0-9]+$" #street="ngModel" ngModel required>
+            <span class="focus-input100"></span>
+          </div>
+          <div *ngIf="street.errors && (street.dirty || street.touched)">
+            <div [hidden]="!street.errors.required" style="color:red;">
+              Street Field is Mandatory
+            </div>
+            <div [hidden]="!street.errors.pattern" style="color:red;">
+              Street Must contain Alphabets and number
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="txt1 p-b-11">
+            Locality
+          </span>
+          <div class="wrap-input100 validate-input m-b-36">
+            <input class="input100" type="text" name="local" maxlength="20"  pattern="[a-zA-Z]*$" #local="ngModel" ngModel required>
+            <span class="focus-input100"></span>
+          </div>
+          <div *ngIf="local.errors && (local.dirty || local.touched)">
+            <div [hidden]="!local.errors.required" style="color:red;">
+              Locality is Mandatory
+            </div>
+            <div [hidden]="!local.errors.pattern" style="color:red;">
+              Local Field Must contain only Alphabets
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="txt1 p-b-11">
+            City
+          </span>
+          <div class="wrap-input100 validate-input m-b-36">
+            <input class="input100" type="text" name="city" pattern="[a-zA-Z]*$" #city="ngModel" min="4" maxlength="12" ngModel required>
+            <span class="focus-input100"></span>
+          </div>
+          <div *ngIf="city.errors && (city.dirty || city.touched)">
+            <div [hidden]="!city.errors.required" style="color:red;">
+              City is Mandatory
+            </div>
+            <div [hidden]="!city.errors.pattern" style="color:red;">
+              City Field Must contain only Alphabets
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="txt1 p-b-11">
+            State
+          </span>
+          <div class="wrap-input100 validate-input m-b-36">
+            <input class="input100" type="text" name="state" pattern="[a-zA-Z]*$" #state="ngModel"  maxlength="15" ngModel required>
+            <span class="focus-input100"></span>
+          </div>
+          <div *ngIf="state.errors && (state.dirty || state.touched)">
+            <div [hidden]="!state.errors.required" style="color:red;">
+              State is Mandatory
+            </div>
+            <div [hidden]="!state.errors.pattern" style="color:red;">
+              State Field Must contain only Alphabets
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="txt1 p-b-11">
+            Pin Code
+          </span>
+          <div class="wrap-input100 validate-input m-b-36">
+            <input class="input100" type="text" name="pin" pattern="[1-9][0-9]{5}" maxlength="6" #pin="ngModel" ngModel required>
+            <span class="focus-input100"></span>
+          </div>
+          <div *ngIf="pin.errors && (pin.dirty || pin.touched)">
+            <div [hidden]="!pin.errors.required" style="color:red;">
+              Pincode is Mandatory
+            </div>
+            <div [hidden]="!pin.errors.pattern" style="color:red;">
+              Pincode must have only 6 Numbers
+            </div>
+          </div>          
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" type="submit">
+            Submit
+          </button>
+
+          <button class="login100-form-btn" style="margin-left: 50px" (click)="goBack()">
+            Cancel
+          </button>
+        </div>
+
+
+
+
+      </form>
+    </div>
+  </div>
+</div>
